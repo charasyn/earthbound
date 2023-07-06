@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module earthbound.bank2F</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">earthbound
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank00.html">bank00</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank01.html">bank01</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank02.html">bank02</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank03.html">bank03</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank04.html">bank04</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank08.html">bank08</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank0A.html">bank0A</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank0B.html">bank0B</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank0C.html">bank0C</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank0E.html">bank0E</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank0F.html">bank0F</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank10.html">bank10</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank11.html">bank11</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank15.html">bank15</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank17.html">bank17</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank18.html">bank18</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank1C.html">bank1C</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank1F.html">bank1F</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank20.html">bank20</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/bank21.html">bank21</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../earthbound/bank2F.html">bank2F</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/commondefs.html">commondefs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/globals.html">globals</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../earthbound/hardware.html">hardware</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module earthbound.bank2F</h1><p>where things that don't fit elsewhere ended up, especially debugging and SRAM management
+</p>
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="calcSaveBlockAddChecksum" class="public" href="../earthbound/bank2F/calcSaveBlockAddChecksum.html">calcSaveBlockAddChecksum</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0734
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="calcSaveBlockXORChecksum" class="public" href="../earthbound/bank2F/calcSaveBlockXORChecksum.html">calcSaveBlockXORChecksum</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF077B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="checkAllBlocksSignature" class="public" href="../earthbound/bank2F/checkAllBlocksSignature.html">checkAllBlocksSignature</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0683
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="checkBlockSignature" class="public" href="../earthbound/bank2F/checkBlockSignature.html">checkBlockSignature</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0630
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="checkSaveCorruption" class="public" href="../earthbound/bank2F/checkSaveCorruption.html">checkSaveCorruption</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0825
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="checkSRAMIntegrity" class="public" href="../earthbound/bank2F/checkSRAMIntegrity.html">checkSRAMIntegrity</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0B9E
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="copySaveBlock" class="public" href="../earthbound/bank2F/copySaveBlock.html">copySaveBlock</a><span class="tableEntryAnnotation">(to, from)</span>
+							</code>
+						</td>
+						<td>$EF06A2
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="copySaveSlot" class="public" href="../earthbound/bank2F/copySaveSlot.html">copySaveSlot</a><span class="tableEntryAnnotation">(to, from)</span>
+							</code>
+						</td>
+						<td>$EF0C15
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugCheckPositionOverlayBackground" class="public" href="../earthbound/bank2F/debugCheckPositionOverlayBackground.html">debugCheckPositionOverlayBackground</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFEAC8
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugCheckViewCharacterMode" class="public" href="../earthbound/bank2F/debugCheckViewCharacterMode.html">debugCheckViewCharacterMode</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE746
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugClearHDMA" class="public" href="../earthbound/bank2F/debugClearHDMA.html">debugClearHDMA</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFEB2A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugDisplayMenuOptions" class="public" href="../earthbound/bank2F/debugDisplayMenuOptions.html">debugDisplayMenuOptions</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFDB21
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugEnemiesEnabled" class="public" href="../earthbound/bank2F/debugEnemiesEnabled.html">debugEnemiesEnabled</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE759
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugHandleCursorMovement" class="public" href="../earthbound/bank2F/debugHandleCursorMovement.html">debugHandleCursorMovement</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE578
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugMain" class="public" href="../earthbound/bank2F/debugMain.html">debugMain</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE175
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugMenuLoad" class="public" href="../earthbound/bank2F/debugMenuLoad.html">debugMenuLoad</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE689
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugProcessCommandSelection" class="public" href="../earthbound/bank2F/debugProcessCommandSelection.html">debugProcessCommandSelection</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE5D3
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugSoundMenu" class="public" href="../earthbound/bank2F/debugSoundMenu.html">debugSoundMenu</a><span class="tableEntryAnnotation">(cursorEntity)</span>
+							</code>
+						</td>
+						<td>$EFD6D4
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="debugViewMapLimitActionscript" class="public" href="../earthbound/bank2F/debugViewMapLimitActionscript.html">debugViewMapLimitActionscript</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EFE6E2 - Limits the actionscript ID of NPCs to 10? but why?
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="displayCheckPositionDebugOverlay" class="public" href="../earthbound/bank2F/displayCheckPositionDebugOverlay.html">displayCheckPositionDebugOverlay</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFDCBC
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="displayViewCharacterDebugOverlay" class="public" href="../earthbound/bank2F/displayViewCharacterDebugOverlay.html">displayViewCharacterDebugOverlay</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFDE1A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="endReplay" class="public" href="../earthbound/bank2F/endReplay.html">endReplay</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFEA9E
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="eraseSaveBlock" class="public" href="../earthbound/bank2F/eraseSaveBlock.html">eraseSaveBlock</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF05A9
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="eraseSaveSlot" class="public" href="../earthbound/bank2F/eraseSaveSlot.html">eraseSaveSlot</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0BFA
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="getAttributeTileFor" class="public" href="../earthbound/bank2F/getAttributeTileFor.html">getAttributeTileFor</a><span class="tableEntryAnnotation">(arg1, x, y)</span>
+							</code>
+						</td>
+						<td>$EFDF0B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="getDeliverySpriteAndPlaceholder" class="public" href="../earthbound/bank2F/getDeliverySpriteAndPlaceholder.html">getDeliverySpriteAndPlaceholder</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EF0EAD
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="initDebugMenuScreen" class="public" href="../earthbound/bank2F/initDebugMenuScreen.html">initDebugMenuScreen</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFDA05
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="integerToBinaryDebugTiles" class="public" href="../earthbound/bank2F/integerToBinaryDebugTiles.html">integerToBinaryDebugTiles</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EFDC69
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="integerToDecimalDebugTiles" class="public" href="../earthbound/bank2F/integerToDecimalDebugTiles.html">integerToDecimalDebugTiles</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EFDBF0
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="integerToHexDebugTiles" class="public" href="../earthbound/bank2F/integerToHexDebugTiles.html">integerToHexDebugTiles</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EFDB95
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="isDebugViewMapMode" class="public" href="../earthbound/bank2F/isDebugViewMapMode.html">isDebugViewMapMode</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE6CF
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="loadGameSlot" class="public" href="../earthbound/bank2F/loadGameSlot.html">loadGameSlot</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0A68
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="loadKirbySprite" class="public" href="../earthbound/bank2F/loadKirbySprite.html">loadKirbySprite</a><span class="tableEntryAnnotation">(__param_0, __param_1)</span>
+							</code>
+						</td>
+						<td>$EFE556
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="loadReplaySaveSlot" class="public" href="../earthbound/bank2F/loadReplaySaveSlot.html">loadReplaySaveSlot</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE8C7
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="pauseMusic" class="public" href="../earthbound/bank2F/pauseMusic.html">pauseMusic</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0256
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="renderAllAttributeRows" class="public" href="../earthbound/bank2F/renderAllAttributeRows.html">renderAllAttributeRows</a><span class="tableEntryAnnotation">(x, y)</span>
+							</code>
+						</td>
+						<td>$EFE133
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="renderAttributeColumn" class="public" href="../earthbound/bank2F/renderAttributeColumn.html">renderAttributeColumn</a><span class="tableEntryAnnotation">(x, y)</span>
+							</code>
+						</td>
+						<td>$EFE07C
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="renderAttributeRow" class="public" href="../earthbound/bank2F/renderAttributeRow.html">renderAttributeRow</a><span class="tableEntryAnnotation">(x, y)</span>
+							</code>
+						</td>
+						<td>$EFDFC4
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="renderDebugDigit" class="public" href="../earthbound/bank2F/renderDebugDigit.html">renderDebugDigit</a><span class="tableEntryAnnotation">(x, y, amount)</span>
+							</code>
+						</td>
+						<td>$EFD56F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="renderDebugMenuString" class="public" href="../earthbound/bank2F/renderDebugMenuString.html">renderDebugMenuString</a><span class="tableEntryAnnotation">(x, y, str)</span>
+							</code>
+						</td>
+						<td>$EFDABD
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="resetDebugSoundModeMenu" class="public" href="../earthbound/bank2F/resetDebugSoundModeMenu.html">resetDebugSoundModeMenu</a><span class="tableEntryAnnotation">(entityID)</span>
+							</code>
+						</td>
+						<td>$EFD5D9
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="resumeMusic" class="public" href="../earthbound/bank2F/resumeMusic.html">resumeMusic</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF026E
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="saveGameBlock" class="public" href="../earthbound/bank2F/saveGameBlock.html">saveGameBlock</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF088F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="saveGameSlot" class="public" href="../earthbound/bank2F/saveGameSlot.html">saveGameSlot</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF0A4D
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="saveReplaySaveSlot" class="public" href="../earthbound/bank2F/saveReplaySaveSlot.html">saveReplaySaveSlot</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE771
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="singleEnemyFlashingOff" class="public" href="../earthbound/bank2F/singleEnemyFlashingOff.html">singleEnemyFlashingOff</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0000
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="singleEnemyFlashingOn" class="public" href="../earthbound/bank2F/singleEnemyFlashingOn.html">singleEnemyFlashingOn</a><span class="tableEntryAnnotation">(arg1, arg2)</span>
+							</code>
+						</td>
+						<td>$EF0052
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="startReplay" class="public" href="../earthbound/bank2F/startReplay.html">startReplay</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFEA4A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="storePersistentReplayState" class="public" href="../earthbound/bank2F/storePersistentReplayState.html">storePersistentReplayState</a><span class="tableEntryAnnotation">(style)</span>
+							</code>
+						</td>
+						<td>$EFE895
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF00BB" class="public" href="../earthbound/bank2F/unknownEF00BB.html">unknownEF00BB</a><span class="tableEntryAnnotation">(arg1, arg2, __param_2)</span>
+							</code>
+						</td>
+						<td>$EF00BB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF00E6" class="public" href="../earthbound/bank2F/unknownEF00E6.html">unknownEF00E6</a><span class="tableEntryAnnotation">(arg1, arg2, arg3)</span>
+							</code>
+						</td>
+						<td>$EF00E6
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0115" class="public" href="../earthbound/bank2F/unknownEF0115.html">unknownEF0115</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EF0115 - Clear the focused window and do something unknown?
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF016F" class="public" href="../earthbound/bank2F/unknownEF016F.html">unknownEF016F</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF016F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF01D2" class="public" href="../earthbound/bank2F/unknownEF01D2.html">unknownEF01D2</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EF01D2
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0262" class="public" href="../earthbound/bank2F/unknownEF0262.html">unknownEF0262</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0262
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF027D" class="public" href="../earthbound/bank2F/unknownEF027D.html">unknownEF027D</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF027D
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF02C4" class="public" href="../earthbound/bank2F/unknownEF02C4.html">unknownEF02C4</a><span class="tableEntryAnnotation">(arg1)</span>
+							</code>
+						</td>
+						<td>$EF02C4
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF031E" class="public" href="../earthbound/bank2F/unknownEF031E.html">unknownEF031E</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF031E
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF04DC" class="public" href="../earthbound/bank2F/unknownEF04DC.html">unknownEF04DC</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF04DC
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0C3D" class="public" href="../earthbound/bank2F/unknownEF0C3D.html">unknownEF0C3D</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0C3D - unused
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0C87" class="public" href="../earthbound/bank2F/unknownEF0C87.html">unknownEF0C87</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0C87
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0C97" class="public" href="../earthbound/bank2F/unknownEF0C97.html">unknownEF0C97</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0C97
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0CA7" class="public" href="../earthbound/bank2F/unknownEF0CA7.html">unknownEF0CA7</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0CA7
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0D23" class="public" href="../earthbound/bank2F/unknownEF0D23.html">unknownEF0D23</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0D23
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0D46" class="public" href="../earthbound/bank2F/unknownEF0D46.html">unknownEF0D46</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0D46
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0D73" class="public" href="../earthbound/bank2F/unknownEF0D73.html">unknownEF0D73</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0D73
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0D8D" class="public" href="../earthbound/bank2F/unknownEF0D8D.html">unknownEF0D8D</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0D8D
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0DFA" class="public" href="../earthbound/bank2F/unknownEF0DFA.html">unknownEF0DFA</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0DFA
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0E67" class="public" href="../earthbound/bank2F/unknownEF0E67.html">unknownEF0E67</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0E67
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0E8A" class="public" href="../earthbound/bank2F/unknownEF0E8A.html">unknownEF0E8A</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0E8A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0EE8" class="public" href="../earthbound/bank2F/unknownEF0EE8.html">unknownEF0EE8</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0EE8
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0F60" class="public" href="../earthbound/bank2F/unknownEF0F60.html">unknownEF0F60</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0F60
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0FDB" class="public" href="../earthbound/bank2F/unknownEF0FDB.html">unknownEF0FDB</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0FDB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEF0FF6" class="public" href="../earthbound/bank2F/unknownEF0FF6.html">unknownEF0FF6</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EF0FF6
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEFD95E" class="public" href="../earthbound/bank2F/unknownEFD95E.html">unknownEFD95E</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFD95E
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEFD9F3" class="public" href="../earthbound/bank2F/unknownEFD9F3.html">unknownEFD9F3</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFD9F3
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="unknownEFE708" class="public" href="../earthbound/bank2F/unknownEFE708.html">unknownEFE708</a><span class="tableEntryAnnotation">()</span>
+							</code>
+						</td>
+						<td>$EFE708
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="validateSaveBlockChecksums" class="public" href="../earthbound/bank2F/validateSaveBlockChecksums.html">validateSaveBlockChecksums</a><span class="tableEntryAnnotation">(id)</span>
+							</code>
+						</td>
+						<td>$EF07C0
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Global variables</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="checkPositionOverlayBackgroundHDMATable" class="public" href="../earthbound/bank2F/checkPositionOverlayBackgroundHDMATable.html">
+								<code>checkPositionOverlayBackgroundHDMATable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">13</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFEB1D
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="commandWindowText" class="public" href="../earthbound/bank2F/commandWindowText.html">
+								<code>commandWindowText</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">10</span><span class="pun">]</span><span class="pun">[</span><span class="lit">6</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFA37A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="debugFontPalette" class="public" href="../earthbound/bank2F/debugFontPalette.html">
+								<code>debugFontPalette</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><a href="../earthbound/commondefs/RGB.html"><span class="pln">RGB</span></a><span class="pun">[</span><span class="lit">12</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFEF9F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="debugMenuFont" class="public" href="../earthbound/bank2F/debugMenuFont.html">
+								<code>debugMenuFont</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EFEB5F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="debugMenuText2Line1" class="public" href="../earthbound/bank2F/debugMenuText2Line1.html">
+								<code>debugMenuText2Line1</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[</span><span class="lit">33</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFD8B5
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="debugMenuText2Lines" class="public" href="../earthbound/bank2F/debugMenuText2Lines.html">
+								<code>debugMenuText2Lines</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[</span><span class="lit">17</span><span class="pun">]</span><span class="pun">[</span><span class="lit">8</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="kirby" class="public" href="../earthbound/bank2F/kirby.html">
+								<code>kirby</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EFEFB7
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataPerSectorTownMapData" class="public" href="../earthbound/bank2F/mapDataPerSectorTownMapData.html">
+								<code>mapDataPerSectorTownMapData</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><a href="../earthbound/commondefs/TownMapData.html"><span class="typ">TownMapData</span></a><span class="pun">[</span><span class="lit">32</span><span class="pun">]</span><span class="pun">[</span><span class="lit">80</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFA70F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataTileAnimationPointerTable" class="public" href="../earthbound/bank2F/mapDataTileAnimationPointerTable.html">
+								<code>mapDataTileAnimationPointerTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[]</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EF11CB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataTileArrangementPtrTable" class="public" href="../earthbound/bank2F/mapDataTileArrangementPtrTable.html">
+								<code>mapDataTileArrangementPtrTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[]</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EF10AB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataTileCollisionPointerTable" class="public" href="../earthbound/bank2F/mapDataTileCollisionPointerTable.html">
+								<code>mapDataTileCollisionPointerTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">4</span><span class="pun">]</span><span class="pun">[</span><span class="lit">4</span><span class="pun">]</span><span class="pun">*</span><span class="pun">[]</span><span class="pun">[</span><span class="lit">20</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EF117B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataTilesetPtrTable" class="public" href="../earthbound/bank2F/mapDataTilesetPtrTable.html">
+								<code>mapDataTilesetPtrTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[]</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EF105B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapDataWeirdTileAnimationPointerTable" class="public" href="../earthbound/bank2F/mapDataWeirdTileAnimationPointerTable.html">
+								<code>mapDataWeirdTileAnimationPointerTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><a href="../earthbound/commondefs/TilesetAnimation.html"><span class="typ">TilesetAnimation</span></a><span class="pun">[</span><span class="lit">20</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EF121B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mapPalettePointerTable" class="public" href="../earthbound/bank2F/mapPalettePointerTable.html">
+								<code>mapPalettePointerTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[]</span><span class="pun">)</span><span class="pun">[]</span></code>
+						</td>
+						<td>$EF10FB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nameInputWindowSelectionLayoutPointers" class="public" href="../earthbound/bank2F/nameInputWindowSelectionLayoutPointers.html">
+								<code>nameInputWindowSelectionLayoutPointers</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[]</span><span class="pun">[</span><span class="lit">6</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFA6D3
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sramSignature" class="public" href="../earthbound/bank2F/sramSignature.html">
+								<code>sramSignature</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EF0591
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="statusWindowText" class="public" href="../earthbound/bank2F/statusWindowText.html">
+								<code>statusWindowText</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">163</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFA3B6
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tilesetTable" class="public" href="../earthbound/bank2F/tilesetTable.html">
+								<code>tilesetTable</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">32</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EF101B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="townMapMapping" class="public" href="../earthbound/bank2F/townMapMapping.html">
+								<code>townMapMapping</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ushort</span><span class="pun">[</span><span class="lit">6</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFC50F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unknownEF05A6" class="public" href="../earthbound/bank2F/unknownEF05A6.html">
+								<code>unknownEF05A6</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EF05A6
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unknownEFEF70" class="public" href="../earthbound/bank2F/unknownEFEF70.html">
+								<code>unknownEFEF70</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">47</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFEF70
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unknownEFEF9F" class="public" href="../earthbound/bank2F/unknownEFEF9F.html">
+								<code>unknownEFEF9F</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">[</span><span class="lit">71</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFFF9F
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unknownEFF1BB" class="public" href="../earthbound/bank2F/unknownEFF1BB.html">
+								<code>unknownEFF1BB</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ushort</span><span class="pun">[</span><span class="lit">256</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFF1BB
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unknownEFF5BB" class="public" href="../earthbound/bank2F/unknownEFF5BB.html">
+								<code>unknownEFF5BB</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><a href="../earthbound/commondefs/SpriteMap.html"><span class="typ">SpriteMap</span></a><span class="pun">*</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pun">)</span></code>
+						</td>
+						<td>$EFF5BB
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
