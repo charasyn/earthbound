@@ -68,13 +68,14 @@ private struct WAVHeader {
 
 void extractExtraAssets(scope AddFileFunction addFile, scope ProgressUpdateFunction reportProgress, immutable(ubyte)[] rom) {
     reportProgress(Progress("Extracting songs"));
-    ubyte[65536] song4; // we want the silent song to record sound effects against
-    buildNSPCFiles(rom, addFile, song4);
+    ubyte[][0xBF] songs; // we want the silent song to record sound effects against
+    buildNSPCFiles(rom, addFile, songs);
     ubyte[][0x80] sfx;
     static __gshared uint counter;
     foreach (i, ref data; sfx[].parallel) {
-        data = dumpSoundEffect(song4[], cast(ubyte)i);
-        reportProgress(Progress("Extracting sound effects", ++counter, 127));
+        reportProgress(Progress("Extracting sound effects", counter, 127));
+        data = dumpSoundEffect(songs[], cast(ubyte)i);
+        ++counter;
     }
     foreach (idx, sound; sfx) {
         addFile(format!"sfx/%03d.wav"(idx), sound);
@@ -107,7 +108,7 @@ void extractExtraAssets(scope AddFileFunction addFile, scope ProgressUpdateFunct
     buildTextCache(buffer);
     addFile("text", buffer.data);
 }
-void buildNSPCFiles(const ubyte[] data, scope AddFileFunction addFile, out ubyte[65536] song4) {
+void buildNSPCFiles(const ubyte[] data, scope AddFileFunction addFile, out ubyte[][0xBF] songs) {
     static align(1) struct PackPointer {
         align(1):
         ubyte bank;
@@ -144,27 +145,30 @@ void buildNSPCFiles(const ubyte[] data, scope AddFileFunction addFile, out ubyte
         Appender!(ubyte[]) buffer;
         writer.toBytes(buffer);
         if (idx == 4) {
-            loadAllSubpacks(song4[], buffer.data[NSPCFileHeader.sizeof .. $]);
+            // loadAllSubpacks(song4[], buffer.data[NSPCFileHeader.sizeof .. $]);
         }
+        songs[idx] = buffer.data;
         addFile(format!"song/%03d.nspc"(idx), buffer.data);
     }
 }
 
-ubyte[] dumpSoundEffect(scope ubyte[] data, ubyte index) {
+ubyte[] dumpSoundEffect(scope ubyte[][] songs, ubyte index) {
     enum chunkLength = 512 * short.sizeof * 2;
     enum silentChunkThreshold = 128;
 
 
     auto player = new EarthboundSPC700;
     player.initialize(null);
-    player.loadSong(data);
+    foreach (song; songs) {
+        player.loadSong(song);
+    }
     player.changeSong(0, 0x500);
     player.writeRegister(Register.APUIO0, 4); // port 0 is used for song playing, track 4 is silence
     player.writeRegister(Register.APUIO3, index); // port 3 is used for sound effects
-    ubyte[] full = new ubyte[](WAVHeader.sizeof);
-    (cast(WAVHeader[])(full[0 .. WAVHeader.sizeof]))[0] = WAVHeader.init;
+    ubyte[] audioData = new ubyte[](0);
     auto buffer = new ubyte[](chunkLength);
     size_t threshold = silentChunkThreshold;
+    size_t upperLimit = 400;
     while (true) {
         player.audioCallback(buffer);
         if (buffer.all!(x => x == 0)) {
@@ -174,9 +178,14 @@ ubyte[] dumpSoundEffect(scope ubyte[] data, ubyte index) {
         } else {
             threshold = silentChunkThreshold;
         }
-        full ~= buffer;
+        audioData ~= buffer;
+        if (--upperLimit == 0) {
+            break;
+        }
     }
-    full = full[0 .. max(WAVHeader.sizeof + chunkLength, $ - chunkLength * (silentChunkThreshold - 1))];
+    ubyte[] full = new ubyte[](WAVHeader.sizeof);
+    (cast(WAVHeader[])(full[0 .. WAVHeader.sizeof]))[0] = WAVHeader.init;
+    full ~= audioData;
     with((cast(WAVHeader[])(full[0 .. WAVHeader.sizeof]))[0]) {
         chunk2.size = cast(uint)(full.length - WAVHeader.sizeof);
         chunkSize = cast(uint)(full.length - 8);
